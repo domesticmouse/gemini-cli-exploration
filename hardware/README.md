@@ -63,7 +63,7 @@ Please review the schematic in this directory and explain what it does.
 
 Compare notes with the people next to you. Did you see the same result, or something different?
 
-## Step 3
+## On to step 3
 
 Will involve checking out the next step and moving to another directory. Exciting!
 
