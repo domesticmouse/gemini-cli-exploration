@@ -21,3 +21,12 @@ to get you started:
 ```
 Please review @Micronova.kicad_sch and explain what it does.
 ```
+
+Compare and contrast with the following prompt:
+
+```
+Please review the schematic in this directory and explain what it does.
+```
+
+How do the outputs of these two prompts differ? What do you think the implementation
+concerns driving these differences are?
