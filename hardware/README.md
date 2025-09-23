@@ -30,3 +30,24 @@ Please review the schematic in this directory and explain what it does.
 
 How do the outputs of these two prompts differ? What do you think the implementation
 concerns driving these differences are?
+
+# Powering up Gemini
+
+Next, you will give Gemini background information on Eurorack Power Supplies.
+Here's the first prompt:
+
+```
+Please search the web for information on the design of Eurorack Power Supplies.
+```
+
+Here's the follow up to commit it to disk:
+
+```
+Please update GEMINI.md with this information.
+```
+
+And then check out Step 2 of the workshop.
+
+```console
+git checkout step-02
+```
