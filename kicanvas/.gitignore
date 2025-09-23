@@ -1,0 +1,6 @@
+build/
+node_modules/
+dist/
+www/kicanvas
+coverage/
+esbuild-meta.json

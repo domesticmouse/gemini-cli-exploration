@@ -70,3 +70,26 @@ Will involve checking out the next step and moving to another directory. Excitin
 ```console
 git checkout step-03
 ```
+
+## Using KiCanvas
+
+If you look in [`../kicanvas`](../kicanvas) you will see a web application for
+viewing KiCad schematics and PCB files. You can run it as follows:
+
+```console
+$ cd ../kicanvas
+$ npm install
+$ npm run serve
+```
+
+Once you have it running, you can load up the `Micronova.kicad_sch` schematic in [KiCanvas](http://localhost:8001/?github=https%3A%2F%2Fgithub.com%2Fdomesticmouse%2Fgemini-cli-exploration%2Fblob%2Fmain%2Fhardware%2FMicronova.kicad_sch).
+
+Alternatively, you can do it in the [hosted KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fdomesticmouse%2Fgemini-cli-exploration%2Fblob%2Fmain%2Fhardware%2FMicronova.kicad_sch).
+
+## On to step 4
+
+Step 4 will involve reviewing code with Gemini's help.
+
+```console
+git checkout step-04
+```
