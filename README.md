@@ -24,4 +24,14 @@ This will update Gemini CLI to the latest version on every invocation.
 
 ## The workshop itself
 
-The workshop is in the branches. Checkout branch `step-01` to get started.
+The workshop is in the branches.
+
+### Step 1
+
+Checkout `step-01` branch:
+
+```bash
+git checkout step-01
+```
+
+Review the [`hardware/README.md`](hardware/README.md) for what to do next.
