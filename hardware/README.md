@@ -31,7 +31,7 @@ Please review the schematic in this directory and explain what it does.
 How do the outputs of these two prompts differ? What do you think the implementation
 concerns driving these differences are?
 
-# Powering up Gemini
+## Powering up Gemini
 
 Next, you will give Gemini background information on Eurorack Power Supplies.
 Here's the first prompt:
@@ -50,4 +50,23 @@ And then check out Step 2 of the workshop.
 
 ```console
 git checkout step-02
+```
+
+## And then...
+
+Try out the following prompt, now that [`GEMINI.md`](GEMINI.md) contains information
+on design patters for Eurorack Modular power supplies.
+
+```
+Please review the schematic in this directory and explain what it does.
+```
+
+Compare notes with the people next to you. Did you see the same result, or something different?
+
+## Step 3
+
+Will involve checking out the next step and moving to another directory. Exciting!
+
+```console
+git checkout step-03
 ```
