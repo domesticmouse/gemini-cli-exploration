@@ -31,7 +31,7 @@ Please review the schematic in this directory and explain what it does.
 How do the outputs of these two prompts differ? What do you think the implementation
 concerns driving these differences are?
 
-# Powering up Gemini
+## Powering up Gemini
 
 Next, you will give Gemini background information on Eurorack Power Supplies.
 Here's the first prompt:
