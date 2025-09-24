@@ -110,7 +110,7 @@ MCP server.
 
 ## On to step 4
 
-Step 4 will involve reviewing code with Gemini's help.
+Step 4 will creating an MCP server.
 
 ```console
 git checkout step-04
