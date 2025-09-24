@@ -40,6 +40,6 @@ Review the [`hardware/README.md`](hardware/README.md) for what to do next.
 
 [TheaCodes](https://github.com/theacodes) built a large chunk of the infrastructure that this
 workshop is built upon. She designed the [Micronova](https://github.com/wntrblm/Micronova)
-Eurorack Power Supply that is the schematic used in this codelab. She built
+Eurorack Power Supply that is the schematic used in this workshop. She built
 [KiCanvas](https://kicanvas.org/) which is the basis of the MCP tool that is 
-built out in the course of this codelab.
+built out in the course of this workshop.
