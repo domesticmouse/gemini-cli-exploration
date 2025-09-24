@@ -90,7 +90,7 @@ Now that you have run the app, ask Gemini to review the codebase.
 Run Gemini and then use the following prompt.
 
 ```text
-Please review the following codebase and explain the component parts.
+Please review this codebase and explain the component parts.
 ```
 
 We are going to use code from this application as the basis of an MCP server
