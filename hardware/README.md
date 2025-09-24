@@ -18,14 +18,14 @@ It can also be installed with Homebrew on macOS, but is not required for this wo
 Ask Gemini to review the schematic and explain what it does. Here is a prompt
 to get you started:
 
-```
+```text
 Please review @Micronova.kicad_sch and explain what it does.
 ```
 
 Compare and contrast with the following prompt:
 
-```
-Please review the schematic in this directory and explain what it does.
+```text
+Please review `Micronova.kicad_sch` and explain what it does.
 ```
 
 How do the outputs of these two prompts differ? What do you think the implementation
@@ -36,17 +36,17 @@ concerns driving these differences are?
 Next, you will give Gemini background information on Eurorack Power Supplies.
 Here's the first prompt:
 
-```
+```text
 Please search the web for information on the design of Eurorack Power Supplies.
 ```
 
-Here's the follow up to commit it to disk:
+Here's how to write it to disk:
 
-```
-Please update GEMINI.md with this information.
+```text
+Please update `GEMINI.md` with this information.
 ```
 
-And then check out Step 2 of the workshop.
+However, this is already done in step 2.
 
 ```console
 git checkout step-02
