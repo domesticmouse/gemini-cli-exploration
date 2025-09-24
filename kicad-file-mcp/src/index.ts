@@ -95,39 +95,29 @@ server.tool(
       };
     }
 
-    const symbols = Array.from(file.symbols.values()).map((s) => ({
-      uuid: s.uuid,
-      lib_id: s.lib_id,
-      reference: s.reference,
-      value: s.value,
-      footprint: s.footprint,
-      properties: Object.fromEntries(s.properties),
-      pins: s.pins.map((p) => ({
-        uuid: p.uuid,
-        number: p.number,
-        definition: {
-          type: p.definition.type,
-          shape: p.definition.shape,
-          name: p.definition.name.text,
-          number: p.definition.number.text,
-        },
-      })),
-    }));
+    const summary = {
+      filename: file.filename,
+      title_block: file.title_block,
+      component_count: file.symbols.size,
+      net_count:
+        file.net_labels.length +
+        file.global_labels.length +
+        file.hierarchical_labels.length,
+    };
+
+    const message = `\n
+This is a summary of the schematic file.
+To get more details, you can use the following tools:
+- \`list_components\`: to list all components in the project.
+- \`find_nets\`: to find all named nets in this schematic.
+- \`get_schematic_hierarchy\`: to see the sheet hierarchy.
+`;
 
     return {
       content: [
         {
           type: "text",
-          text: JSON.stringify(
-            {
-              version: file.version,
-              generator: file.generator,
-              uuid: file.uuid,
-              symbols,
-            },
-            null,
-            2,
-          ),
+          text: JSON.stringify(summary, null, 2) + message,
         },
       ],
     };
@@ -152,8 +142,6 @@ server.tool(
           lib_id: symbol.lib_id,
           reference: symbol.reference,
           value: symbol.value,
-          footprint: symbol.footprint,
-          properties: Object.fromEntries(symbol.properties),
         });
       }
     }
@@ -161,6 +149,62 @@ server.tool(
     return {
       content: [
         { type: "text", text: JSON.stringify(components, null, 2) },
+      ],
+    };
+  },
+);
+
+server.tool(
+  "get_component_details",
+  "Get detailed information about a specific component.",
+  {
+    uuid: z.string().describe("The UUID of the component to get details for."),
+  },
+  ({ uuid }) => {
+    if (!project) {
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
+    }
+
+    for (const schematic of project.schematics()) {
+      for (const symbol of schematic.symbols.values()) {
+        if (symbol.uuid === uuid) {
+          const replacer = (key: string, value: any) => {
+            if (key === "parent" || key.startsWith("_")) {
+              return undefined;
+            }
+            if (value instanceof Map) {
+              return Object.fromEntries(value.entries());
+            }
+            return value;
+          };
+
+          return {
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify(
+                  {
+                    schematic: schematic.filename,
+                    uuid: symbol.uuid,
+                    lib_id: symbol.lib_id,
+                    reference: symbol.reference,
+                    value: symbol.value,
+                    footprint: symbol.footprint,
+                    properties: Object.fromEntries(symbol.properties),
+                  },
+                  replacer,
+                  2,
+                ),
+              },
+            ],
+          };
+        }
+      }
+    }
+
+    return {
+      content: [
+        { type: "text", text: `Component with UUID not found: ${uuid}` },
       ],
     };
   },
