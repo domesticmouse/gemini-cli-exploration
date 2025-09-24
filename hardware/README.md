@@ -166,14 +166,6 @@ page https://github.com/modelcontextprotocol/typescript-sdk for information
 about the MCP SDK.
 ```
 
-## MCP Server, but now with KiCad parsing capabilities
-
-The files required to parse KiCad files have been copied from
-`klcanvas` to `kicad-file-mcp` but not wired up yet.
-
-Ask Gemini to review the codebase and plan out how to integrate the KiCad
-functionality into the MCP server.
-
 ## On to step 6
 
 Step 6 shows the finished product.
