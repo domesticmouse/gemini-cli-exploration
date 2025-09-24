@@ -3,13 +3,7 @@
     Published under the standard MIT License.
     Full text available at: https://opensource.org/licenses/MIT
 */
-
-/**
- * Esbuild bundles css files in this package using the "text" content type.
- * This tells typescript about it.
- */
-
 declare module "*.kicad_wks" {
-    const value: string;
-    export default value;
+    const content: string;
+    export default content;
 }

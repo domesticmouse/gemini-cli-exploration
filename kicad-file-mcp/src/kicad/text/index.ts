@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-export * from "./eda-text";
-export * from "./font";
-export * from "./glyph";
-export * from "./lib-text";
-export * from "./sch-field";
-export * from "./sch-text";
-export * from "./stroke-font";
+export * from "./eda-text.js";
+export * from "./font.js";
+export * from "./glyph.js";
+export * from "./lib-text.js";
+export * from "./sch-field.js";
+export * from "./sch-text.js";
+export * from "./stroke-font.js";

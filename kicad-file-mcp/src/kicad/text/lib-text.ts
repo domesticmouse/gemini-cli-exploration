@@ -4,8 +4,8 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Vec2 } from "../../base/math";
-import { EDAText } from "./eda-text";
+import { Angle, BBox, Vec2 } from "../../base/math/index.js";
+import { EDAText } from "./eda-text.js";
 
 /**
  * Represents text objects that belong to a symbol. This is just for graphical

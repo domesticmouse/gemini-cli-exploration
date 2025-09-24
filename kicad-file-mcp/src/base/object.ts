@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { is_object } from "./types";
+import { is_object } from "./types.js";
 
 export function merge(dst: any, src?: any) {
     if (src == null || src == undefined) {

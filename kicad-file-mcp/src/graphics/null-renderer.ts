@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import type { Color } from "../base/color";
-import { Angle, Matrix3, Vec2 } from "../base/math";
-import { RenderLayer, Renderer } from "./renderer";
-import { Arc, Circle, Polygon, Polyline, type Shape } from "./shapes";
+import type { Color } from "../base/color.js";
+import { Angle, Matrix3, Vec2 } from "../base/math/index.js";
+import { RenderLayer, Renderer } from "./renderer.js";
+import { Arc, Circle, Polygon, Polyline, type Shape } from "./shapes.js";
 
 export class NullRenderLayer extends RenderLayer {
     shapes: Shape[] = [];

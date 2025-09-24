@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Vec2 } from "../../base/math";
-import { At, Effects } from "../common";
-import { Font, TextAttributes } from "./font";
-import { StrokeFont } from "./stroke-font";
+import { Angle, BBox, Vec2 } from "../../base/math/index.js";
+import { At, Effects } from "../common.js";
+import { Font, TextAttributes } from "./font.js";
+import { StrokeFont } from "./stroke-font.js";
 
 /** Primary text mixin
  *

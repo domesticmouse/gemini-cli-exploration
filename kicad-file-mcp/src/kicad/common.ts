@@ -4,9 +4,9 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Color } from "../base/color";
-import { Vec2 } from "../base/math";
-import { P, T, parse_expr, type Parseable } from "./parser";
+import { Color } from "../base/color.js";
+import { Vec2 } from "../base/math/index.js";
+import { P, T, parse_expr, type Parseable } from "./parser.js";
 
 export function unescape_string(str: string): string {
     const escape_vars = {

@@ -4,7 +4,7 @@
   "description": "A Model Context Protocol (MCP) server for reading and analyzing KiCad project files",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc && chmod 755 build/index.js",
+    "build": "tsc && chmod 755 build/index.js && cp src/kicad/default_drawing_sheet.kicad_wks build/kicad/",
     "dev": "tsc --watch",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",

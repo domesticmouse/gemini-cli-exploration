@@ -4,14 +4,14 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-export { KicadPCB } from "./board";
-export { KicadSch } from "./schematic";
-export { DrawingSheet, type DrawingSheetDocument } from "./drawing-sheet";
-export { ProjectSettings } from "./project-settings";
+export { KicadPCB } from "./board.js";
+export { KicadSch } from "./schematic.js";
+export { DrawingSheet, type DrawingSheetDocument } from "./drawing-sheet.js";
+export { ProjectSettings } from "./project-settings.js";
 export type {
     Theme,
     BaseTheme,
     BoardTheme,
     SchematicTheme,
     BoardOrSchematicTheme,
-} from "./theme";
+} from "./theme.js";

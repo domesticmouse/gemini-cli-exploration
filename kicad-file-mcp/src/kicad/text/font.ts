@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Matrix3, Vec2 } from "../../base/math";
-import { Color, Polyline, Renderer } from "../../graphics";
-import { Glyph, StrokeGlyph } from "./glyph";
-import { Markup, MarkupNode } from "./markup";
+import { Angle, BBox, Matrix3, Vec2 } from "../../base/math/index.js";
+import { Color, Polyline, Renderer } from "../../graphics/index.js";
+import { Glyph, StrokeGlyph } from "./glyph.js";
+import { Markup, MarkupNode } from "./markup.js";
 
 /** Font base class
  *

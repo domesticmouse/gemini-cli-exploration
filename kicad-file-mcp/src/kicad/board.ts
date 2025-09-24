@@ -4,8 +4,8 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Arc as MathArc, Matrix3, Vec2 } from "../base/math";
-import type { Project } from "../kicanvas/project";
+import { Angle, BBox, Arc as MathArc, Matrix3, Vec2 } from "../base/math/index.js";
+import type { Project } from "../kicanvas/project.js";
 import {
     At,
     Effects,
@@ -13,9 +13,9 @@ import {
     Stroke,
     TitleBlock,
     expand_text_vars,
-} from "./common";
-import { P, T, parse_expr, type Parseable } from "./parser";
-import type { List } from "./tokenizer";
+} from "./common.js";
+import { P, T, parse_expr, type Parseable } from "./parser.js";
+import type { List } from "./tokenizer.js";
 
 export type Drawing =
     | GrLine

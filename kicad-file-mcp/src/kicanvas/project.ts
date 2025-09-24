@@ -4,18 +4,18 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { sorted_by_numeric_strings } from "../base/array";
-import { Barrier } from "../base/async";
-import { type IDisposable } from "../base/disposable";
-import { FileSystem } from "../base/fs";
-import { first, length, map } from "../base/iterator";
-import { Logger } from "../base/log";
-import { is_string, type Constructor } from "../base/types";
-import { KicadPCB, KicadSch, ProjectSettings } from "../kicad";
+import { sorted_by_numeric_strings } from "../base/array.js";
+import { Barrier } from "../base/async.js";
+import { type IDisposable } from "../base/disposable.js";
+import { FileSystem } from "../base/fs.js";
+import { first, length, map } from "../base/iterator.js";
+import { Logger } from "../base/log.js";
+import { is_string, type Constructor } from "../base/types.js";
+import { KicadPCB, KicadSch, ProjectSettings } from "../kicad/index.js";
 import type {
     SchematicSheet,
     SchematicSheetInstance,
-} from "../kicad/schematic";
+} from "../kicad/schematic.js";
 
 const log = new Logger("kicanvas:project");
 

@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Vec2 } from "./vec2";
+import { Vec2 } from "./vec2.js";
 
 export type AngleLike = Angle | number;
 

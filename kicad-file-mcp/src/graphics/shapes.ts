@@ -10,8 +10,8 @@
  * them is implemented as part of the specific Renderer.
  */
 
-import { Angle, BBox, Vec2 } from "../base/math";
-import { Color } from "../base/color";
+import { Angle, BBox, Vec2 } from "../base/math/index.js";
+import { Color } from "../base/color.js";
 
 type OptionalDefaultColor = Color | false | null;
 

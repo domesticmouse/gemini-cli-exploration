@@ -4,8 +4,8 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Matrix3, Vec2 } from "../../base/math";
-import { EDAText } from "./eda-text";
+import { Angle, BBox, Matrix3, Vec2 } from "../../base/math/index.js";
+import { EDAText } from "./eda-text.js";
 
 type Parent = {
     position: Vec2;

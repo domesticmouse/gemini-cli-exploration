@@ -4,12 +4,12 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { as_array } from "../base/array";
-import { Color } from "../base/color";
-import { Vec2 } from "../base/math";
-import { Logger } from "../base/log";
-import { is_number, is_string } from "../base/types";
-import { listify, type List } from "./tokenizer";
+import { as_array } from "../base/array.js";
+import { Color } from "../base/color.js";
+import { Vec2 } from "../base/math/index.js";
+import { Logger } from "../base/log.js";
+import { is_number, is_string } from "../base/types.js";
+import { listify, type List } from "./tokenizer.js";
 
 const log = new Logger("kicanvas:parser");
 
