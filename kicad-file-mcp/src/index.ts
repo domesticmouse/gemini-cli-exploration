@@ -11,7 +11,7 @@ const server = new McpServer({
 });
 
 export function capitalize(word: string): string {
-  if (!word || typeof word !== 'string') {
+  if (!word) {
     return '';
   }
   return word.charAt(0).toUpperCase() + word.substring(1);
