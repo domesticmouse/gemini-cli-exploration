@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2023 Alethea Katherine Flowers.
+    Copyright (c) 2025 Brett Morgan.
     Published under the standard MIT License.
     Full text available at: https://opensource.org/licenses/MIT
 */

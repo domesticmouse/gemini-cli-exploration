@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/*
+    Copyright (c) 2025 Brett Morgan.
+    Published under the standard MIT License.
+    Full text available at: https://opensource.org/licenses/MIT
+*/
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -18,7 +24,7 @@ let project: Project | undefined;
 
 server.tool(
   "load_project",
-  "Load a KiCad project from a directory.",
+  "Load KiCad files from a directory. The files will be parsed and stored in memory for analysis. This tool will load `.kicad_pro`, `.kicad_sch`, and `.kicad_pcb` files from the directory.",
   {
     path: z.string().describe("The path to the project directory."),
   },
@@ -32,11 +38,11 @@ server.tool(
 
 server.tool(
   "list_project_files",
-  "List all files in the loaded project.",
+  "List all files in the project loaded by `load_project`.",
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
     const files = Array.from(project.files()).map((f) => f?.filename);
     return { content: [{ type: "text", text: files.join("\n") }] };
@@ -49,7 +55,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
     return {
       content: [
@@ -70,7 +76,7 @@ server.tool(
   },
   ({ filename }) => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const file = project.file_by_name(filename);
@@ -134,7 +140,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const components: any[] = [];
@@ -168,7 +174,7 @@ server.tool(
   },
   ({ filename }) => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const file = project.file_by_name(filename);
@@ -217,7 +223,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const hierarchy = Array.from(project.pages()).map((p) => ({
@@ -241,7 +247,7 @@ server.tool(
   },
   ({ filename }) => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const file = project.file_by_name(filename);
@@ -300,7 +306,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const footprints: any[] = [];
@@ -334,7 +340,7 @@ server.tool(
   },
   ({ filename }) => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const file = project.file_by_name(filename);
@@ -370,7 +376,7 @@ server.tool(
   },
   ({ filename }) => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const file = project.file_by_name(filename);
@@ -420,7 +426,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const sch_components = new Set<string>();
@@ -480,7 +486,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const unconnected_pins: any[] = [];
@@ -549,7 +555,7 @@ server.tool(
   {},
   () => {
     if (!project) {
-      return { content: [{ type: "text", text: "No project loaded." }] };
+      return { content: [{ type: "text", text: "No project loaded. Please use `load_project` to load a project directory." }] };
     }
 
     const bom = new Map<string, {
