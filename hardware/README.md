@@ -110,7 +110,7 @@ MCP server.
 
 ## On to step 4
 
-Step 4 will creating an MCP server.
+Step 4 will create an MCP server.
 
 ```console
 git checkout step-04
@@ -149,10 +149,27 @@ KiCad File MCP server.
 git checkout step-05
 ```
 
-## MCP Server, but now with KiCad parsing capabilities
+## Getting Gemini to plan out work
 
-The files required to parse KiCad files have been copied from
-`klcanvas` to `kicad-file-mcp` but not wired up yet.
+The code in the `kicad-file-mcp` directory now contains a bunch of code
+from `kicanvas` around parsing the KiCad file formats. However, there
+is no connection from the KiCad parsing code and the MCP server.
 
-Ask Gemini to review the codebase and plan out how to integrate the KiCad
-functionality into the MCP server.
+Ask Gemini to plan out how to integrate the code. Run Gemini in the
+`kicad-file-mcp` directory and run the following prompt.
+
+```text
+The code in this directory now contains a lot of code for parsing KiCad
+files. Please plan out how to expose this functionality through the MCP
+service in @src/index.ts. You may find it useful to review the following
+page https://github.com/modelcontextprotocol/typescript-sdk for information
+about the MCP SDK.
+```
+
+## On to step 6
+
+Step 6 shows the finished product.
+
+```console
+git checkout step-06
+```
