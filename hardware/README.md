@@ -109,3 +109,9 @@ This gives us a plan on how to get started. But first, we need a hello world
 MCP server.
 
 ## On to step 4
+
+Step 4 will involve reviewing code with Gemini's help.
+
+```console
+git checkout step-04
+```
