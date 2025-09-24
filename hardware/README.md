@@ -52,10 +52,10 @@ However, this is already done in step 2.
 git checkout step-02
 ```
 
-## And then...
+## And then
 
 Try out the following prompt, now that [`GEMINI.md`](GEMINI.md) contains information
-on design patters for Eurorack Modular power supplies.
+on design patterns for Eurorack Modular power supplies.
 
 ```text
 Please review `Micronova.kicad_sch` and explain what it does.
