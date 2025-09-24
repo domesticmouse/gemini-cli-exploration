@@ -1,0 +1,7 @@
+{
+    "mcpServers": {
+        "kicadFileMcpServer": {
+            "command": "../kicad-file-mcp/build/index.js"
+        }
+    }
+}

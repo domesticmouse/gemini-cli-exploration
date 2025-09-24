@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Color } from "../base/color";
+import { Color } from "../base/color.js";
 
 export interface Theme {
     name: string;

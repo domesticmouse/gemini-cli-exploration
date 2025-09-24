@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import type { IDisposable } from "./disposable";
+import type { IDisposable } from "./disposable.js";
 
 /**
  * Adds an event listener and wraps it as a Disposable. When disposed, the

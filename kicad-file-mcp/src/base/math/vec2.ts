@@ -4,9 +4,9 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { is_number } from "../types";
-import { Angle, type AngleLike } from "./angle";
-import { Matrix3 } from "./matrix3";
+import { is_number } from "../types.js";
+import { Angle, type AngleLike } from "./angle.js";
+import { Matrix3 } from "./matrix3.js";
 
 export type Vec2Like =
     | Vec2

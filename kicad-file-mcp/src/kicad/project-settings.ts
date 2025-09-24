@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { merge } from "../base/object";
+import { merge } from "../base/object.js";
 
 /**
  * Holds configuration and settings from a .kicad_pro file.

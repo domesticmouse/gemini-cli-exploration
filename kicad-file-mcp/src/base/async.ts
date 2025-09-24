@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import type { IDisposable } from "./disposable";
+import type { IDisposable } from "./disposable.js";
 
 /**
  * Waits the given number of milliseconds and resolves.

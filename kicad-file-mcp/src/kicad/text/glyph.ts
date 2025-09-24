@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Vec2 } from "../../base/math";
+import { Angle, BBox, Vec2 } from "../../base/math/index.js";
 
 /**
  * Glyph abstract base class

@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Color } from "../base/color";
-import type { IDisposable } from "../base/disposable";
-import { Angle, BBox, Arc as MathArc, Matrix3, Vec2 } from "../base/math";
-import { Arc, Circle, Polygon, Polyline } from "./shapes";
+import { Color } from "../base/color.js";
+import type { IDisposable } from "../base/disposable.js";
+import { Angle, BBox, Arc as MathArc, Matrix3, Vec2 } from "../base/math/index.js";
+import { Arc, Circle, Polygon, Polyline } from "./shapes.js";
 
 /**
  * KiCanvas' abstraction over various graphics backends.

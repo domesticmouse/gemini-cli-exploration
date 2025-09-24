@@ -4,9 +4,9 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle } from "../../base/math";
-import { At } from "../common";
-import { EDAText } from "./eda-text";
+import { Angle } from "../../base/math/index.js";
+import { At } from "../common.js";
+import { EDAText } from "./eda-text.js";
 
 /**
  * Represents text objects that belong to the schematic, not to any individual

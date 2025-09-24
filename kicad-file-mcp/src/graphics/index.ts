@@ -4,6 +4,6 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-export * from "./renderer";
-export * from "./shapes";
-export { Color } from "../base/color";
+export * from "./renderer.js";
+export * from "./shapes.js";
+export { Color } from "../base/color.js";

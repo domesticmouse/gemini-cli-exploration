@@ -4,9 +4,9 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle } from "./angle";
-import { BBox } from "./bbox";
-import { Vec2 } from "./vec2";
+import { Angle } from "./angle.js";
+import { BBox } from "./bbox.js";
+import { Vec2 } from "./vec2.js";
 
 /**
  * A circular arc

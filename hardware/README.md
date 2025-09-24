@@ -110,7 +110,7 @@ MCP server.
 
 ## On to step 4
 
-Step 4 will creating an MCP server.
+Step 4 will create an MCP server.
 
 ```console
 git checkout step-04
@@ -149,6 +149,23 @@ KiCad File MCP server.
 git checkout step-05
 ```
 
+## Getting Gemini to plan out work
+
+The code in the `kicad-file-mcp` directory now contains a bunch of code
+from `kicanvas` around parsing the KiCad file formats. However, there
+is no connection from the KiCad parsing code and the MCP server.
+
+Ask Gemini to plan out how to integrate the code. Run Gemini in the
+`kicad-file-mcp` directory and run the following prompt.
+
+```text
+The code in this directory now contains a lot of code for parsing KiCad
+files. Please plan out how to expose this functionality through the MCP
+service in @src/index.ts. You may find it useful to review the following
+page https://github.com/modelcontextprotocol/typescript-sdk for information
+about the MCP SDK.
+```
+
 ## MCP Server, but now with KiCad parsing capabilities
 
 The files required to parse KiCad files have been copied from
@@ -156,3 +173,36 @@ The files required to parse KiCad files have been copied from
 
 Ask Gemini to review the codebase and plan out how to integrate the KiCad
 functionality into the MCP server.
+
+## On to step 6
+
+Step 6 shows the finished product.
+
+```console
+git checkout step-06
+```
+
+## Use the MCP tool
+
+The code in `kicad-file-mcp` has changed. You will need to re-run the build
+to update the compiled versions. In the `kicad-file-mcp` directory, run
+the following command.
+
+```console
+npm run build
+```
+
+The MCP tool has been developed. To use it, change directory back to the
+hardware directory, and run Gemini. Give it the following prompt, and
+review how the results have changed.
+
+```text
+Please review `Micronova.kicad_sch` using the MCP tool and explain what it does.
+```
+
+I found it useful to ask Gemini to give a detailed explanation of how
+the circuit works.
+
+```text
+Please give a detailed explanation of how this circuit works.
+```

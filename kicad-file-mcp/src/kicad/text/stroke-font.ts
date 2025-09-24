@@ -4,11 +4,11 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Angle, BBox, Vec2 } from "../../base/math";
-import { is_number, is_string } from "../../base/types";
-import { Font, TextStyle } from "./font";
-import { Glyph, StrokeGlyph } from "./glyph";
-import * as newstroke from "./newstroke-glyphs";
+import { Angle, BBox, Vec2 } from "../../base/math/index.js";
+import { is_number, is_string } from "../../base/types.js";
+import { Font, TextStyle } from "./font.js";
+import { Glyph, StrokeGlyph } from "./glyph.js";
+import * as newstroke from "./newstroke-glyphs.js";
 
 /** Stroke font
  *

@@ -4,11 +4,12 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Color } from "../base/color";
-import { BBox, Vec2 } from "../base/math";
-import { Paper, expand_text_vars } from "./common";
-import default_sheet from "./default_drawing_sheet.kicad_wks";
-import { P, T, parse_expr, type Parseable } from "./parser";
+import { Color } from "../base/color.js";
+import { BBox, Vec2 } from "../base/math/index.js";
+import { Paper, expand_text_vars } from "./common.js";
+import * as fs from "fs";
+import * as path from "path";
+import { P, T, parse_expr, type Parseable } from "./parser.js";
 
 export type DrawingSheetDocument = {
     paper?: Paper;
@@ -41,6 +42,8 @@ export class DrawingSheet {
     }
 
     static default() {
+        const sheet_path = path.join(__dirname, "default_drawing_sheet.kicad_wks");
+        const default_sheet = fs.readFileSync(sheet_path, "utf-8");
         return new DrawingSheet(default_sheet);
     }
 

@@ -4,10 +4,10 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Color } from "../base/color";
-import * as log from "../base/log";
-import { Arc as MathArc, Vec2 } from "../base/math";
-import type { Project } from "../kicanvas/project";
+import { Color } from "../base/color.js";
+import * as log from "../base/log.js";
+import { Arc as MathArc, Vec2 } from "../base/math/index.js";
+import type { Project } from "../kicanvas/project.js";
 import {
     At,
     Effects,
@@ -16,8 +16,8 @@ import {
     TitleBlock,
     expand_text_vars,
     unescape_string,
-} from "./common";
-import { P, T, parse_expr, type Parseable } from "./parser";
+} from "./common.js";
+import { P, T, parse_expr, type Parseable } from "./parser.js";
 
 /* Default values for various things found in schematics
  * From EESchema's default_values.h, converted from mils to mm. */

@@ -17,29 +17,24 @@ export class Logger {
     ) {}
 
     #log(method: CallableFunction, ...args: any[]) {
-        method(
-            `%c${this.name}:%c`,
-            `color: ButtonText`,
-            `color: inherit`,
-            ...args,
-        );
+        method(`${this.name}:`, ...args);
     }
 
     public debug(...args: any[]) {
         if (this.level >= LogLevel.DEBUG) {
-            this.#log(console.debug, ...args);
+            this.#log(console.error, ...args);
         }
     }
 
     public info(...args: any[]) {
         if (this.level >= LogLevel.INFO) {
-            this.#log(console.info.bind(window.console), ...args);
+            this.#log(console.error, ...args);
         }
     }
 
     public warn(...args: any[]) {
         if (this.level >= LogLevel.ERROR) {
-            this.#log(console.warn, ...args);
+            this.#log(console.error, ...args);
         }
     }
 

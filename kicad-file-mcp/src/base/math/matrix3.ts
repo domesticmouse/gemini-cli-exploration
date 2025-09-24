@@ -4,8 +4,8 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { Vec2 } from "./vec2";
-import { Angle, type AngleLike } from "./angle";
+import { Vec2 } from "./vec2.js";
+import { Angle, type AngleLike } from "./angle.js";
 
 type ElementArray = [
     number,
