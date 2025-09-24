@@ -86,10 +86,28 @@ Once you have it running, you can load up the `Micronova.kicad_sch` schematic in
 
 Alternatively, you can do it in the [hosted KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fdomesticmouse%2Fgemini-cli-exploration%2Fblob%2Fmain%2Fhardware%2FMicronova.kicad_sch).
 
+Now that you have run the app, ask Gemini to review the codebase.
+Run Gemini and then use the following prompt.
+
+```text
+Please review the following codebase and explain the component parts.
+```
+
+We are going to use code from this application as the basis of an MCP server
+for reading KiCad files. Ask Gemini which parts we need to carry out this
+work.
+
+```text
+I want to use the tokenizer and parser from this project in a standalone
+command line application for parsing and understanding KiCad files. Which
+parts do I need, and how should I build a node application from these parts?
+
+Do not write any code, this is purely a planning step.
+```
+
+This gives us a plan on how to get started. But first, we need a hello world
+MCP server.
+
 ## On to step 4
 
-Step 4 will involve reviewing code with Gemini's help.
 
-```console
-git checkout step-04
-```
