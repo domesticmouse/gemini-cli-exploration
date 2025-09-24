@@ -115,3 +115,36 @@ Step 4 will creating an MCP server.
 ```console
 git checkout step-04
 ```
+
+## A wild MCP server appears
+
+In `../kicad-file-mcp` there is the start of an MCP server. Change
+into that directory, install dependencies, and run Gemini:
+
+```console
+cd ../kicad-file-mcp
+npm install
+gemini
+```
+
+You should now be able to inspect the available MCP servers inside of
+Gemini with the `/mcp` slash-command and ask it to greet someone.
+
+```text
+Please use the sayHello command to greet Bob by name.
+```
+
+You can also ask Gemini to review the codebase.
+
+```text
+Please review the code in this directory and explain what it does.
+```
+
+## On to step 5
+
+Step 5 will involve adding the KiCad parsing capabilities from KiCanvas to
+KiCad File MCP server.
+
+```console
+git checkout step-05
+```
