@@ -7,6 +7,7 @@
 import { sorted_by_numeric_strings } from "../base/array";
 import { Barrier } from "../base/async";
 import { type IDisposable } from "../base/disposable";
+import { FileSystem } from "../base/fs";
 import { first, length, map } from "../base/iterator";
 import { Logger } from "../base/log";
 import { is_string, type Constructor } from "../base/types";
@@ -15,12 +16,11 @@ import type {
     SchematicSheet,
     SchematicSheetInstance,
 } from "../kicad/schematic";
-import type { VirtualFileSystem } from "./services/vfs";
 
 const log = new Logger("kicanvas:project");
 
 export class Project extends EventTarget implements IDisposable {
-    #fs: VirtualFileSystem;
+    #fs: FileSystem;
     #files_by_name: Map<string, KicadPCB | KicadSch | null> = new Map();
     #pages_by_path: Map<string, ProjectPage> = new Map();
     #root_schematic_page?: ProjectPage;
@@ -33,7 +33,7 @@ export class Project extends EventTarget implements IDisposable {
         this.#pages_by_path.clear();
     }
 
-    public async load(fs: VirtualFileSystem): Promise<void> {
+    public async load(fs: FileSystem): Promise<void> {
         log.info(`Loading project from ${fs.constructor.name}`);
 
         this.settings = new ProjectSettings();
@@ -44,7 +44,7 @@ export class Project extends EventTarget implements IDisposable {
 
         let promises = [];
 
-        for (const filename of this.#fs.list()) {
+        for await (const filename of this.#fs.list()) {
             promises.push(this.#load_file(filename));
         }
 
@@ -299,13 +299,6 @@ export class Project extends EventTarget implements IDisposable {
 
     public page_by_path(project_path: string): ProjectPage | undefined {
         return this.#pages_by_path.get(project_path);
-    }
-
-    public async download(name: string): Promise<void> {
-        if (this.#pages_by_path.has(name)) {
-            name = this.#pages_by_path.get(name)!.filename;
-        }
-        return await this.#fs.download(name);
     }
 
     #active_page: ProjectPage | null = null;
